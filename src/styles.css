@@ -1,0 +1,14 @@
+.App {
+  font-family: sans-serif;
+}
+
+body {
+  font-family: sans-serif;
+  padding: none;
+  margin: 0px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #333;
+  height: 100%;
+  width: 100%;
+}
