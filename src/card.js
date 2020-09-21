@@ -7,7 +7,7 @@ import { FlexRow } from "./App";
 var myDeity = require("random-greek-gods");
 
 const User = styled.span({ fontWeight: 600 });
-const Content = styled.span({ fontWeight: 400, color: "grey", marginLeft: 12 });
+const Comment = styled.span({ fontWeight: 400, color: "grey", marginLeft: 12 });
 
 const MenuBar = (props) => (
   <FlexRow style={{ cursor: "pointer", gap: 20, height: 40 }}>
@@ -100,19 +100,19 @@ export const Card = (props) => (
         <p>
           <span style={{ fontWeight: 400 }}>
             <User>{myDeity()}</User>
-            <Content>Uva uvam vivendo varia fit?</Content>
+            <Comment>Uva uvam vivendo varia fit?</Comment>
           </span>
         </p>
         <p>
           <span style={{ fontWeight: 400 }}>
             <User>{myDeity()}</User>
-            <Content>Ita est.</Content>
+            <Comment>Ita est.</Comment>
           </span>
         </p>
         <p>
           <span style={{ fontWeight: 400 }}>
             <User>{myDeity()}</User>
-            <Content>In hoc signo vinces.</Content>
+            <Comment>In hoc signo vinces.</Comment>
           </span>
         </p>
       </div>
