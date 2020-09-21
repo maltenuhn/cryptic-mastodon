@@ -6,6 +6,9 @@ import { FlexRow } from "./App";
 
 var myDeity = require("random-greek-gods");
 
+const User = styled.span({ fontWeight: 600 });
+const Content = styled.span({ fontWeight: 400, color: "grey", marginLeft: 12 });
+
 const MenuBar = (props) => (
   <FlexRow style={{ cursor: "pointer", gap: 20, height: 40 }}>
     <div style={{ fontSize: 25 }}>✩</div>
@@ -68,8 +71,49 @@ export const Card = (props) => (
       <img src={props.url} width={375} />
       <div style={{ width: "100%", marginLeft: 16, marginRight: 16 }}>
         <MenuBar />
+        <p className="description">
+          <span style={{ fontFamily: "garamond", fontSize: 15 }}>
+            Quando quegli stati, che si acquistano, sono abituati a vivere con
+            le loro leggi e in libertà, a volerli mantenere, ci sono tre modi:
+            il primo, raderne al suolo le città; l’altro, andarvi ad abitare
+            personalmente; il terzo,{" "}
+            <b>
+              lasciarli vivere con le loro leggi, traendone un tributo e
+              creandovi dentro un’amministrazione fatta di pochi individui che
+              te li conservino amici.
+            </b>
+            <a style={{ color: "black", textDecoration: "none" }} href="">
+              #macchiavelli
+            </a>
+            &nbsp;
+            <a style={{ color: "black", textDecoration: "none" }} href="">
+              #goodadvice
+            </a>
+            &nbsp;
+            <a style={{ color: "black", textDecoration: "none" }} href="">
+              #selfhelp
+            </a>
+            &nbsp;
+          </span>
+        </p>
+
         <p>
-          <span style={{ fontWeight: 400 }}>IN HOC SIGNO VINCES.</span>.
+          <span style={{ fontWeight: 400 }}>
+            <User>{myDeity()}</User>
+            <Content>Uva uvam vivendo varia fit?</Content>
+          </span>
+        </p>
+        <p>
+          <span style={{ fontWeight: 400 }}>
+            <User>{myDeity()}</User>
+            <Content>Ita est.</Content>
+          </span>
+        </p>
+        <p>
+          <span style={{ fontWeight: 400 }}>
+            <User>{myDeity()}</User>
+            <Content>In hoc signo vinces.</Content>
+          </span>
         </p>
       </div>
     </div>
