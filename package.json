@@ -1,11 +1,8 @@
 {
-  "name": "react",
+  "name": "occultagram",
   "version": "1.0.0",
-  "description": "React example starter project",
-  "keywords": [
-    "react",
-    "starter"
-  ],
+  "description": "A cryptic clone of a famous meme sharing application, showcasing different css-based layout systems.",
+  "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "@emotion/core": "10.0.35",

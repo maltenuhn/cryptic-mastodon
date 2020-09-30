@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import "./styles.css";
-
 import React from "react";
 import { jsx, css, Global } from "@emotion/core";
 import styled from "@emotion/styled";
@@ -255,7 +254,7 @@ export default function App() {
     <div
       id="sampleBody"
       style={{
-        background: "lightblue",
+        background: "url(./bg.jpg)",
         width: "100%",
         height: "100%",
         position: "absolute"
@@ -264,18 +263,32 @@ export default function App() {
       <div
         style={{
           position: "absolute",
+          left: 0,
+          right: 0,
+          bottom: 0,
+          top: 0,
+          background: "rgba(78,0,0,.3)",
+          backdropFilter: "blur (23px)"
+        }}
+      />
+
+      <div
+        data-label="preview"
+        style={{
+          position: "absolute",
           width: 375,
           margin: 40,
           boxShadow: "0px 10px 35px 5px rgba(0,0,0,.5)",
           borderRadius: 5,
-          background: "white",
+          background: "rgb(10,30,50)",
+          color: "#B2943D",
           display: "flex",
           flexDirection: "column",
           justifyContent: "stretch",
           overflow: "hidden"
         }}
       >
-        <TopMenu>
+        <TopMenu style={{ fontSize: 30 }}>
           <span>␐</span>
           <span style={{ fontWeight: "bold" }}>␖</span>
           <span>␖</span>
@@ -299,7 +312,7 @@ export default function App() {
             zIndex: 99999,
             left: 0,
             right: 0,
-            backgroundColor: "white",
+            backgroundColor: "rgb(30,60,80)",
             boxShadow: "inset 0px 1px 0px 0px grey",
             display: "grid",
             gridTemplateColumns: "60px 60px 120px 60px 60px",
@@ -315,7 +328,7 @@ export default function App() {
             style={{
               fontSize: 22,
               fontWeight: 700,
-              color: "rgb(55,220,100)",
+              color: "#B2943D",
               justifyContent: "center"
             }}
           >
@@ -325,7 +338,7 @@ export default function App() {
             style={{
               fontSize: 22,
               fontWeight: 700,
-              color: "rgb(55,220,100)",
+              color: "#B2943D",
               justifyContent: "center"
             }}
           >
@@ -335,7 +348,7 @@ export default function App() {
             style={{
               fontSize: 22,
               fontWeight: 700,
-              color: "rgb(55,220,100)",
+              color: "#B2943D",
               justifyContent: "center"
             }}
           >
@@ -345,7 +358,7 @@ export default function App() {
             style={{
               fontSize: 22,
               fontWeight: 700,
-              color: "rgb(55,220,100)",
+              color: "#B2943D",
               justifyContent: "center"
             }}
           >
@@ -355,7 +368,7 @@ export default function App() {
             style={{
               fontSize: 22,
               fontWeight: 700,
-              color: "rgb(0,220,100)",
+              color: "#B2943D",
               justifyContent: "center"
             }}
           >
@@ -384,6 +397,63 @@ export default function App() {
               <Card url={item}>{item}</Card>
             ))}
           </Content>
+
+          <div
+            id="grid"
+            css={{
+              paddingBottom: 60,
+              display: "grid",
+              gridTemplateColumns: "1fr 2fr 1fr 1fr",
+              gridTemplateRows: "1fr 1fr ",
+
+              gridGap: "5px",
+              transition: "all 1s ease-in-out",
+              "&:hover": { gridGap: "10px" },
+              "& > div": {
+                backgroundColor: "grey",
+                color: "white",
+                transition: "all .2s linear",
+                cursor: "pointer"
+              },
+              "& > div:active": {
+                transform: "scale(.9)",
+                filter: "darker(.8)"
+              }
+            }}
+          >
+            {[
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ].map((x) => (
+              <div
+                style={{
+                  display: "flex",
+                  borderRadius: 10,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "50px"
+                }}
+              >
+                {x}
+              </div>
+            ))}
+          </div>
           <BottomMenu />
         </div>
       </div>
